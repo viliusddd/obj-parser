@@ -36,11 +36,6 @@ LIB = re.compile(r'(?P<LIB>(?:(?:mtllib)|(?:adobemdllib)) ([a-zA-Z0-9_]*.(?:mtl)
 USE = re.compile(r'(?P<USE>usemtl ([a-zA-Z_0-9]*))')
 TRI = re.compile(r'(?P<TRI>f ((?:[0-9/]*(?: |)){3}(?!...)))')
 
-#geo_pat = re.compile(GEO) # geometry name(s)
-#lib_pat = re.compile(TRI) # mtl/mdl file name and or if it exists
-#use_pat = re.compile(USE) # material name(s)
-#tri_pat = re.compile(TRI) # triangle count
-
 tris = int(0) #green
 quads = int(0) # green
 fiveGons = int(0) # yellow
@@ -56,7 +51,6 @@ with open(argv[1], "rt") as f:
         g = GEO.scanner(line.rstrip()).match()
         if u:
             print(u)
-            #mtl_name.append(u.group(0))
         elif t:
             tris += 1
         elif g:
