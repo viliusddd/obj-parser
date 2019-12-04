@@ -36,10 +36,10 @@ LIB = re.compile(r'(?P<LIB>(?:(?:mtllib)|(?:adobemdllib)) ([a-zA-Z0-9_]*.(?:mtl)
 USE = re.compile(r'(?P<USE>usemtl ([a-zA-Z_0-9]*))')
 TRI = re.compile(r'(?P<TRI>f ((?:[0-9/]*(?: |)){3}(?!...)))')
 
-tris = int(0) #green
-quads = int(0) # green
-fiveGons = int(0) # yellow
-nGons = int(0) # red
+tris = int(0)
+quads = int(0)
+fiveGons = int(0)
+nGons = int(0)
 mtl_name = []
 with open(argv[1], "rt") as f:
     for line in f:
