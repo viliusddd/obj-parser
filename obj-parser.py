@@ -44,7 +44,6 @@ mtl_name = []
 with open(argv[1], "rt") as f:
     for line in f:
         f.readline().rstrip()
-        #print(line.rstrip())
         u = USE.scanner(line.rstrip()).match()
         t = TRI.scanner(line.rstrip()).match()
         l = LIB.scanner(line.rstrip()).match()
