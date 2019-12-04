@@ -16,7 +16,7 @@ class obj(object):
         filesAll = []
 
         if isdir(self.path):
-            for root, dirs, files in walk(self.path):
+                     for root, dirs, files in walk(self.path):
                 for item in files:
                     filesAll.append(join(root, item))
             for item in filesAll:
@@ -28,7 +28,7 @@ class obj(object):
             if self.path.endswith('.obj'):
                 return self.path
 
-    def tokenize(self):
+    def tokenize(self:
         pass
 # Token Specification
 GEO = re.compile(r'(?P<GEO>g ([a-zA-Z_0-9]*))')
@@ -44,7 +44,6 @@ mtl_name = []
 with open(argv[1], "rt") as f:
     for line in f:
         f.readline().rstrip()
-        #print(line.rstrip())
         u = USE.scanner(line.rstrip()).match()
         t = TRI.scanner(line.rstrip()).match()
         l = LIB.scanner(line.rstrip()).match()
