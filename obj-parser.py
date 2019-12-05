@@ -18,9 +18,7 @@ class obj(object):
         if isdir(self.path):
             for root, dirs, files in walk(self.path):
                           for item in files:
-
-
-                    filesAll.append(join(root, item))
+                            filesAll.append(join(root, item))
             for item in filesAll:
                 if item.endswith('.obj'):
                     filesObj.append(item)
