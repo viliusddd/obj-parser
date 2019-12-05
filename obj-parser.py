@@ -21,33 +21,30 @@ class obj(object):
                 for item in files:
                     filesAll.append(join(root, item))
             for item in filesAll:
-                if item.endswith('.obj'):
+                if item.endswith(".obj"):
                     filesObj.append(item)
             return list(filesObj)
 
         elif isfile(self.path):
-            if self.path.endswith('.obj'):
+            if self.path.endswith(".obj"):
                 return self.path
-
 
     def tokenize(self):
         pass
 
 
 # Token Specification
-GEO = re.compile(r'(?P<GEO>([a-zA-Z_0-9]*))')
-LIB = re.compile(r'(?P<LIB>(?:(?:mtllib)|(?:adobemdllib)) ([a-zA-Z0-9_]*.(?:mtl)|(?:mdl)))')
-USE = re.compile(r'(?P<USE>usemtl ([a-zA-Z_0-9]*))')
-TRI = re.compile(r'(?P<TRI>f ((?:[0-9/]*(?: |)){3}(?!...)))')
+GEO = re.compile(r"(?P<GEO>([a-zA-Z_0-9]*))")
+LIB = re.compile(
+    r"(?P<LIB>(?:(?:mtllib)|(?:adobemdllib)) ([a-zA-Z0-9_]*.(?:mtl)|(?:mdl)))"
+)
+USE = re.compile(r"(?P<USE>usemtl ([a-zA-Z_0-9]*))")
+TRI = re.compile(r"(?P<TRI>f ((?:[0-9/]*(?: |)){3}(?!...)))")
 
 tris = int(0)
 quads = int(0)
 fiveGons = int(0)
 nGons = int(0)
-
-
-
-
 
 
 mtl_name = []
@@ -56,9 +53,9 @@ with open(argv[1], "rt") as f:
         f.readline().rstrip()
         u = USE.scanner(line.rstrip()).match()
         t = TRI.scanner(line.rstrip()).match()
-        l = LIB.scanner(line.rstrip()).match()                
+        l = LIB.scanner(line.rstrip()).match()
         g = GEO.scanner(line.rstrip()).match()
-        if u: 
+        if u:
             print(u)
         elif t:
             tris += 1
@@ -67,4 +64,5 @@ with open(argv[1], "rt") as f:
         elif l:
             mtl_name.append(l.group(2))
     print(mtl_name)
+    print(tris)
     print(tris)
