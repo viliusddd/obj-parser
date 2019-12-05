@@ -67,5 +67,4 @@ with open(argv[1], "rt") as f:
         elif l:
             mtl_name.append(l.group(2))
     print(mtl_name)
-    print(tris)i   
-    print(tris ),
+    print(tris)
