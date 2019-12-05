@@ -45,6 +45,11 @@ quads = int(0)
 fiveGons = int(0)
 nGons = int(0)
 
+
+
+
+
+
 mtl_name = []
 with open(argv[1], "rt") as f:
     for line in f:
