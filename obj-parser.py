@@ -68,4 +68,4 @@ with open(argv[1], "rt") as f:
             mtl_name.append(l.group(2))
     print(mtl_name)
     print(tris)
-                                                                                        print(tris ),
+    print(tris ),
