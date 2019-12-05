@@ -56,9 +56,9 @@ with open(argv[1], "rt") as f:
         f.readline().rstrip()
         u = USE.scanner(line.rstrip()).match()
         t = TRI.scanner(line.rstrip()).match()
-        l = LIB.scanner(line.rstrip()).match()
+        l = LIB.scanner(line.rstrip()).match()                
         g = GEO.scanner(line.rstrip()).match()
-        if u:
+        if u: 
             print(u)
         elif t:
             tris += 1
