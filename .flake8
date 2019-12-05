@@ -2,5 +2,6 @@
 max-line-length = 100
 max-complexity  = 10
 ignore          = E203
+select          = BLK100
 exclude =
     __pycache__
