@@ -1,9 +1,5 @@
-from os import listdir
-from os.path import isfile, isdir, join, splitext, basename
+from os.path import isfile, isdir, join
 from sys import argv
-from zipfile import ZipFile
-import csv
-import json
 import re
 import os
 
@@ -53,7 +49,7 @@ with open(argv[1], "rt") as f:
         f.readline().rstrip()
         u = USE.scanner(line.rstrip()).match()
         t = TRI.scanner(line.rstrip()).match()
-        l = LIB.scanner(line.rstrip()).match()
+        ll = LIB.scanner(line.rstrip()).match()
         g = GEO.scanner(line.rstrip()).match()
         if u:
             print(u)
@@ -61,8 +57,8 @@ with open(argv[1], "rt") as f:
             tris += 1
         elif g:
             print(g.group(2))
-        elif l:
-            mtl_name.append(l.group(2))
+        elif ll:
+            mtl_name.append(ll.group(2))
     print(mtl_name)
     print(tris)
     print(tris),

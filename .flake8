@@ -1,10 +1,6 @@
 [flake8]
-# ignore          = E501,D100,D101,D102,D103,D104,D105, E203, E266, E501, W503
 max-line-length = 100
 max-complexity  = 10
+ignore          = E203
 exclude =
-    .git,
     __pycache__
-show_source     = True
-statistics      = True
-select          = E901,E999,F821,F822,F823
