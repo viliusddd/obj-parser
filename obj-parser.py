@@ -29,6 +29,7 @@ class obj(object):
         pass
 
 
+print(" test")
 # Token Specification
 GEO = re.compile(r"(?P<GEO>([a-zA-Z_0-9]*))")
 LIB = re.compile(
