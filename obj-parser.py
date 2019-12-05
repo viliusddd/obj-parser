@@ -15,9 +15,11 @@ class obj(object):
         filesObj = []
         filesAll = []
 
-        if isdir(self.path):
+                            if isdir(self.path):
             for root, dirs, files in walk(self.path):
-                for item in files:
+                          for item in files:
+
+
                     filesAll.append(join(root, item))
             for item in filesAll:
                 if item.endswith('.obj'):
@@ -31,7 +33,7 @@ class obj(object):
     def tokenize(self:
         pass
 # Token Specification
-GEO = re.compile(r'(?P<GEO>g ([a-zA-Z_0-9]*))')
+                                                            GEO = re.compile(r'(?P<GEO>g ([a-zA-Z_0-9]*))')
 LIB = re.compile(r'(?P<LIB>(?:(?:mtllib)|(?:adobemdllib)) ([a-zA-Z0-9_]*.(?:mtl)|(?:mdl)))')
 USE = re.compile(r'(?P<USE>usemtl ([a-zA-Z_0-9]*))')
 TRI = re.compile(r'(?P<TRI>f ((?:[0-9/]*(?: |)){3}(?!...)))')
