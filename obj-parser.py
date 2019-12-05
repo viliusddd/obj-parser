@@ -42,6 +42,7 @@ quads = int(0)
 fiveGons = int(0)
 nGons = int(0)
 
+print("a")
 
 mtl_name = []
 with open(argv[1], "rt") as f:
