@@ -28,10 +28,10 @@ class obj(object):
             if self.path.endswith('.obj'):
                 return self.path
 
-    def tokenize(self:
+    def tokenize(self):
         pass
 # Token Specification
-                                                            GEO = re.compile(r'(?P<GEO>g ([a-zA-Z_0-9]*))')
+GEO = re.compile(r'(?P<GEO>([a-zA-Z_0-9]*))')
 LIB = re.compile(r'(?P<LIB>(?:(?:mtllib)|(?:adobemdllib)) ([a-zA-Z0-9_]*.(?:mtl)|(?:mdl)))')
 USE = re.compile(r'(?P<USE>usemtl ([a-zA-Z_0-9]*))')
 TRI = re.compile(r'(?P<TRI>f ((?:[0-9/]*(?: |)){3}(?!...)))')
