@@ -28,11 +28,15 @@ class obj(object):
     def tokenize(self):
         pass
 
+    
+    
+    
+
 
 # Token Specification
 GEO = re.compile(r"(?P<GEO>([a-zA-Z_0-9]*))")
 LIB = re.compile(
-    r"(?P<LIB>(?:(?:mtllib)|(?:adobemdllib)) ([a-zA-Z0-9_]*.(?:mtl)|(?:mdl)))")
+                 r"(?P<LIB>(?:(?:mtllib)|(?:adobemdllib)) ([a-zA-Z0-9_]*.(?:mtl)|(?:mdl)))")
 USE = re.compile(r"(?P<USE>usemtl ([a-zA-Z_0-9]*))")
 TRI = re.compile(r"(?P<USE>usemtl ([a-zA-Z_0-9]*))")
 
