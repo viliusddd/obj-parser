@@ -15,7 +15,7 @@ class obj(object):
         filesObj = []
         filesAll = []
 
-                            if isdir(self.path):
+        if isdir(self.path):
             for root, dirs, files in walk(self.path):
                           for item in files:
 
