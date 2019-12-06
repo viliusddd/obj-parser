@@ -29,12 +29,10 @@ class obj(object):
         pass
 
 
-print(" test")
+print( " test" )
 # Token Specification
 GEO = re.compile(r"(?P<GEO>([a-zA-Z_0-9]*))")
-LIB = re.compile(
-    r"(?P<LIB>(?:(?:mtllib)|(?:adobemdllib)) ([a-zA-Z0-9_]*.(?:mtl)|(?:mdl)))"
-)
+LIB = re.compile( r"(?P<LIB>(?:(?:mtllib)|(?:adobemdllib)) ([a-zA-Z0-9_]*.(?:mtl)|(?:mdl)))" )
 USE = re.compile(r"(?P<USE>usemtl ([a-zA-Z_0-9]*))")
 TRI = re.compile(r"(?P<USE>usemtl ([a-zA-Z_0-9]*))")
 
@@ -43,7 +41,7 @@ quads = int(0)
 fiveGons = int(0)
 nGons = int(0)
 
-print("a")
+print( "a" )
 
 mtl_name = []
 with open(argv[1], "rt") as f:
@@ -61,6 +59,6 @@ with open(argv[1], "rt") as f:
             print(g.group(2))
         elif ll:
             mtl_name.append(ll.group(2))
-    print(mtl_name)
-    print(tris)
-    print(tris),
+    print( mtl_name )
+    print( tris )
+    print( tris ),
